@@ -13,3 +13,8 @@ jobs:
       - name: Uso de env.
         run: |
           echo "Aprendiendo a usar secrets: ${{ env.NUEVO_SECRET }}"
+  check-env:
+    if: ${{ env.NUEVO_SECRET == 'Mi primer secret'}}
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "El env es correcto"
