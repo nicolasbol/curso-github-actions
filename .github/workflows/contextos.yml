@@ -1,0 +1,15 @@
+name: Contexto
+run-name: ¡Estoy aprendiendo a usar Contextos!
+on: push
+env:
+  NUEVO_SECRET : ${{ secrets.FIRST_SECRET }}
+jobs:
+  check-main:
+    if: ${{ github.ref == 'refs/heads/main' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Uso de $GITHUB_REF
+        run: echo "Cuidado! Desplegando en la rama $GITHUB_REF"
+      - name: Uso de env.
+        run: |
+          echo "Aprendiendo a usar secrets: ${{ env.NUEVO_SECRET }}"
