@@ -16,7 +16,7 @@ jobs:
       - name: check ENV-SECRETS
         run: |
           echo "Este es el nuevo secreto = $NUEVO_SECRET "
-          if [[ 'esto' == $NUEVO_SECRET ]]; then
+          if [[ 'Mi primer secret' == $NUEVO_SECRET ]]; then
            echo "El env es correcto"
           else
             echo "El secreto es incorrecto"
