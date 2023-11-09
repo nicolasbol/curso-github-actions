@@ -15,7 +15,8 @@ jobs:
           echo "Aprendiendo a usar secrets: ${{ env.NUEVO_SECRET }}"
       - name: check ENV-SECRETS
         run: |
-          if [[ 'esto' == 'Mi primer' ]]; then
+          echo "Este es el nuevo secreto = $NUEVO_SECRET "
+          if [[ 'esto' == $NUEVO_SECRET ]]; then
            echo "El env es correcto"
           else
             echo "El secreto es incorrecto"
