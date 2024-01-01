@@ -43,7 +43,7 @@ jobs:
         run: echo ¡Hola Mundo desde ${{steps.ip.outputs.ipv4}}!
       
       - name: Hola node
-        uses: actions/setup-node@v4.0.0
+        uses: actions/setup-node@v4.0.1
         with:
           node-version: 18
           
